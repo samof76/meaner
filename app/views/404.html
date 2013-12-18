@@ -7,10 +7,13 @@
 {% endblock %}
 
 {% block content %}
-    #error-message-box
-    #error-stack-trace
-        pre
-            code!= error
+    <div id="error-message-box">
+        <div id="error-stack-trace">
+            <pre>
+                <code>{{error}}</code>
+            </pre>
+        </div>
+    </div>
 {% endblock %}
 
 
