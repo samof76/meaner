@@ -1,20 +1,24 @@
 {% extends 'auth.html' %}
 
 {% block auth %}
-  <form action="/users/session" method="post">
-    <p class="error">{{message}}</p>
-    <div class="control-group">
-      <label for="email"> Email</label>
-      <input id="email" type="text" name="email" placeholder='Email'>
+  <div class="ui grid">
+    <div class="eight wide column">
+      <div class="ui fluid form segment">
+        <h3 class="ui header">Sign in</h3>
+        <form action="/users/session" method="post">
+          <p class="error">{{message}}</p>
+          <div class="field">
+            <label for="email"> Email</label>
+            <input id="email" type="text" name="email" placeholder='Email'>
+          </div>
+          <div class="field">
+            <label for="password"> Password</label>
+            <input id="password" type="password"  name="password" placeholder="Password">
+          </div>
+          <button class="ui blue submit button" type="submit">Sign in 
+          </button>
+        </form>
+      </div>
     </div>
-    <div class="control-group">
-      <label for="password"> Password</label>
-      <input id="password" type="password"  name="password" placeholder="Password">
-    </div>
-    <div class="control-group">
-      <button class="btn btn-primary" type="submit">Sign in</button> 
-      &nbsp;or&nbsp;
-      <a class="show-signup" href="/signup">Sign up</a>
-    </div>
-  </form>
+  </div>
 {% endblock %}

@@ -1,20 +1,36 @@
-<div class="navbar-inner" ng-controller="HeaderController">
-	<ul class="nav">
-		<li><a class="brand" href="/">ngFantasyFootball</a></li>
-	</ul>
-	<ul class="nav pull-right" ng-hide="">
-		<li><a href="signup">Signup</a></li>
-		<li class="divider-vertical"></li>
-		<li><a href="signin">Signin</a></li>
-	</ul>
-	<ul class="nav pull-right" ng-show="">
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				User <b class="caret"></b>
-			</a>
-			<ul class="dropdown-menu">
-				<li ><a href="/signout">Signout</a></li>
-			</ul>
-		</li>
-	</ul>
+<div class="ui small fixed inverted menu" ng-controller="HeaderController">
+  <a class="active item">
+    <i class="home icon"></i> ngSemanticAngularUI
+  </a>
+  <div class="right menu" ng-hide="">
+    <div class="item">
+      <a href="signup" class="ui blue button">Signup</a>
+    </div>
+    <div class="item">
+      <a href="signin" class="ui teal button">Signin</a>
+    </div>
+  </div>
+  <div class="right menu" ng-show="">
+    <div class="ui dropdown item">
+      User<i class="dropdown icon"></i>
+      <div class="menu">
+        <a href="/signout">Signout</a>
+      </div>
+    </div>
+  </div>
+<!--  <ul class="nav pull-right" ng-hide="">
+      <li><a href="signup">Signup</a></li>
+      <li class="divider-vertical"></li>
+      <li><a href="signin">Signin</a></li>
+  </ul>
+  <ul class="nav pull-right" ng-show="">
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              User <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+              <li ><a href="/signout">Signout</a></li>
+          </ul>
+      </li>
+  </ul>-->
 </div>

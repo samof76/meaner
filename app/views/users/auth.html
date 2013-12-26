@@ -1,18 +1,22 @@
 {% extends '../layouts/default.html' %}
 
 {% block content %}
-  <div class="row">
-    <div class="span6">
-      {% if errors  %}
-        <div class="fade in alert alert-block alert-error">
-          <a class="close" data-dismiss="alert" href="javascript:void(0)">&times;</a>
-          <ul>
-            {% for error in errors %}
-              <li>{{ error.type}}</li>
-            {% endfor %}
-          </ul>
-      {% endif %}
-      {% block auth %}{% endblock %}
+  <div class="ui grid">
+  {% if errors  %}
+    <div class="sixteen wide column">
+          <div class="ui error message">
+            <a data-dismiss="alert" href="javascript:void(0)"><i class="close icon"></i></a>
+            <div class="header">
+              Error!
+            </div>
+            <ul>
+              {% for error in errors %}
+                <li>{{ error.type}}</li>
+              {% endfor %}
+            </ul>
+          </div>
     </div>
+  {% endif %}
   </div>
+  {% block auth %}{% endblock %}
 {% endblock %}
